@@ -1,0 +1,14 @@
+/* src/compoents/input-field/input-field.css */
+
+.input-field {
+	font-size: 1.2rem;
+	padding: .5rem 1rem;
+}
+
+.input-field.small {
+	font-size: .9rem;
+}
+
+.input-field.big {
+	font-size: 2rem;
+}
