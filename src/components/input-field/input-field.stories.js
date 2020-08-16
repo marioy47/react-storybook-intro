@@ -8,8 +8,19 @@ export default {
   component: InputField,
 };
 
-export const InputFieldDefault = () => <InputField />;
+const Template = (args) => <InputField {...args} />;
 
-export const InputFieldSmall = () => <InputField type="small" />;
+export const InputFieldDefault = Template.bind({});
+InputFieldDefault.args = { placeholder: "Hello there" };
 
-export const InputFieldBig = () => <InputField type="big" />;
+export const InputFieldSmall = Template.bind({});
+InputFieldSmall.args = {
+  ...InputFieldDefault.args,
+  type: "small",
+};
+
+export const InputFieldBig = Template.bind({});
+InputFieldBig.args = {
+  ...InputFieldDefault.args,
+  type: "big",
+};
