@@ -10,17 +10,5 @@ export default {
 
 const Template = (args) => <InputField {...args} />;
 
-export const InputFieldDefault = Template.bind({});
-InputFieldDefault.args = { placeholder: "Hello there" };
-
-export const InputFieldSmall = Template.bind({});
-InputFieldSmall.args = {
-  ...InputFieldDefault.args,
-  type: "small",
-};
-
-export const InputFieldBig = Template.bind({});
-InputFieldBig.args = {
-  ...InputFieldDefault.args,
-  type: "big",
-};
+export const Default = Template.bind({});
+Default.args = { placeholder: "Hello World" }

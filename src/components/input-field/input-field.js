@@ -1,6 +1,7 @@
 // src/components/input-field/input-field.js
 
 import React from "react";
+import PropTypes from "prop-types";
 import "./input-field.css";
 
 const InputField = ({ placeholder, type, ...props }) => {
@@ -14,6 +15,16 @@ const InputField = ({ placeholder, type, ...props }) => {
       {...props}
     />
   );
+};
+
+InputField.propTypes = {
+  placeholder: PropTypes.string,
+  type: PropTypes.oneOf(["", "small", "big"]),
+};
+
+InputField.defaultProps = {
+  placeholder: "Input default text",
+  type: null,
 };
 
 export default InputField;
