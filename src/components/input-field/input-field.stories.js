@@ -11,6 +11,8 @@ export default {
       values: [{ name: "WhiteBg", value: "#ffffff" }],
     },
   },
+  argTypes: { onFocus: { action: 'Focused...' } },
+
 };
 
 const Template = (args) => <InputField {...args} />;
