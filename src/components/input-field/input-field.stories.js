@@ -11,8 +11,17 @@ export default {
       values: [{ name: "WhiteBg", value: "#ffffff" }],
     },
   },
-  argTypes: { onFocus: { action: 'Focused...' } },
-
+  argTypes: { onFocus: { action: "Focused..." } },
+  decorators: [
+    (Story) => (
+      <div className="form-group row">
+        <label className="col-form-label col-sm-2">Test Label</label>
+        <div className="col-sm-10">
+          <Story />
+        </div>
+      </div>
+    ),
+  ],
 };
 
 const Template = (args) => <InputField {...args} />;
